@@ -58,7 +58,7 @@ Test
 |click on link  |Add underlying investment                              |
 |populate grid  |[2]|column|[2]|row|[1]|with|tv!Investment Details.IVC_1|
 |populate grid  |[2]|column|[8]|row|[1]|with|Daily                      |
-|populate grid  |[2]|column|[9]|row|[1]|with|3                          |
+|populate grid  |[2]|column|[9]|row|[1]|with|1                          |
 |click on button|Next                                                   |
 
 
