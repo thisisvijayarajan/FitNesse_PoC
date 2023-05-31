@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20221219</FitNesseVersion>
+  <rootPath>FitNesseForAppian.Examples.POC_Legal_Entity_Onboarding.ScenarioBasedValidations</rootPath>
+  <executionLog>
+    <testSystem>fit:fit.FitServer</testSystem>
+    <command>java -cp C:\FitNesse\lib\fitnesse-20221219-standalone.jar fit.FitServer VURAM-2023-0035 52990 3863</command>
+    <exitCode>0</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>1281</totalRunTimeInMillis>
+</testResults>
+

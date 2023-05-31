@@ -30,10 +30,14 @@ Test
 
 
 #Reports
-!| script                                                     |
-|click on menu     |Reports                                   |
-|click on card     |Legal Entities By Contracting Entities[1] |
-|click on pie chart|Real Capital Inc - Australia|pie slice|[1]|
+!| script                                                                  |
+|click on menu        |Reports                                             |
+|click on card        |Legal Entities By Contracting Entities[1]           |
+|click on pie chart   |Real Capital Inc - Australia          |pie slice|[1]|
+|click on column chart|Real Capital Inc - Netherlands        |column   |[1]|
+|verify chart         |Legal Entities By Contracting Entities|is present   |
+|click on bar chart   |Legal Entities By Contracting Entities|bar      |[1]|
+|click on line chart  |Legal Entities By Contracting Entities|point    |[2]|
 
 
 

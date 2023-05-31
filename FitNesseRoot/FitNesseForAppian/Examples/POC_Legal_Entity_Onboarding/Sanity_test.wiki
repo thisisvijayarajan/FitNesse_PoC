@@ -80,7 +80,7 @@ Test
 |logout  |
 ***!
 
-!*** Initialization and Login to Tempo
+!*** Initialization and Login to CI
 
 !| script                                                                             |
 |set appian url to  |https://appiancoe.vuram.com/suite/sites/a-legal-entity-onboarding|

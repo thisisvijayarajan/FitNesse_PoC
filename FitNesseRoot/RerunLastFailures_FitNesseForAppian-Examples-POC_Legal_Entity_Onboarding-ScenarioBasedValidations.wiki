@@ -5,6 +5,6 @@ Suite
 
 !note This page is automatically generated when running tests. It will be overwritten by the next Suite or Test execution.
 
-Tests failed (first failure was at 2023-04-24T14:51:20.643):
+Tests failed (first failure was at 2023-04-26T16:41:40.445):
 
-!see [[FitNesseForAppian.Examples.POC_Legal_Entity_Onboarding.Records][.FitNesseForAppian.Examples.POC_Legal_Entity_Onboarding.Records]]
+!see [[FitNesseForAppian.Examples.POC_Legal_Entity_Onboarding.ScenarioBasedValidations][.FitNesseForAppian.Examples.POC_Legal_Entity_Onboarding.ScenarioBasedValidations]]
