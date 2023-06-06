@@ -43,7 +43,7 @@ Test
 |populate grid  |[2]|column|[6]|row|[1]|with      |${ContactType}|
 |click on button|Initiate Onboarding                             |
 |click on button|Yes                                             |
-|click on link  |LEO                                             |
+|click on button|Agree                                           |
 
 !*** Log out and tear down
 !| script|

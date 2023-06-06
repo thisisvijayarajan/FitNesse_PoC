@@ -92,8 +92,9 @@ Test
 
 ***!
 !*** Log out 
-!| script|
-|logout  |
+!| script |
+|logout   |
+|tear down|
 ***!
 
 

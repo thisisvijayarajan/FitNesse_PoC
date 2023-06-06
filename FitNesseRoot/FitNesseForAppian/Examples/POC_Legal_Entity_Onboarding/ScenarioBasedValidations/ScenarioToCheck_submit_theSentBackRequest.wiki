@@ -6,7 +6,7 @@ Test
 !define TEST_SYSTEM {slim}
 !define COMMAND_PATTERN {java -Dlog4j.configuration=file:///${automated.testing.home}/log4j.properties -cp %p %m}
 !path ${automated.testing.home}/**.jar
-!define Name {Elon Musk}                                                                                                                             
+!define Name {Vijay Kumar}                                                                                                                             
 !define ContactType {Client}                                                                                                              
 *!
 ----
@@ -23,23 +23,79 @@ Test
  3 Click "Test" at the top of this page
 ----
 !*** Initialization and Login to Tempo
-
 !| script                         |com.appiancorp.ps.automatedtest.fixture.TempoFixture                                                  |
 |setup for test script for browser|CHROME|locale|en_US|version|22.4|url|https://appiancoe.vuram.com/suite/sites/a-legal-entity-onboarding|
-|login with username              |testuser_2                                                                                            |
+|login with username              |testuser_1                                                                                            |
 
 
+
+!**** defining variables
+!| script                                                                                                                                                                                                                                                                                                                                                                              |
+|set test variable|Legal Entity Details|with|{"ClientName":Accenture,"LegalEntityIdentifier":123,"LegalEntityName": Sample Entity Name,"Country":India,"Timezone": IST,"ClientEmailAddress":"vijayarajanm@vuram.com","OutgoingEmailAddress": divyasm@vuram.com,"ContractingEntity":Real Capital Inc - India,"ServiceProviders": Real Capital Inc - Australia,"LaunchDate": 04/01/2025}||
+|set test variable|Investment Details  |with|{"IVC_1":IVC001,"IVC_2":IVC002,"IVC_3":IVC003}                                                                                                                                                                                                                                                                                           ||
+
+!*** Initiate Legal Entity Onboarding
+
+#Legal Entity Details
+!|script                                                                                   |
+|click on menu  |Records                                                                   |
+|click on button|Initiate Legal Entity Onboarding                                          |
+|populate field |Client Name            |with|tv!Legal Entity Details.ClientName           |
+|populate field |Legal Entity Identifier|with|tv!Legal Entity Details.LegalEntityIdentifier|
+|populate field |Legal Entity Name      |with|tv!Legal Entity Details.LegalEntityName      |
+|populate field |Country                |with|tv!Legal Entity Details.Country              |
+|populate field |Timezone               |with|tv!Legal Entity Details.Timezone             |
+|populate field |Client - Email Address |with|tv!Legal Entity Details.ClientEmailAddress   |
+|populate field |Outgoing Email Address |with|tv!Legal Entity Details.OutgoingEmailAddress |
+|populate field |Contracting Entity     |with|tv!Legal Entity Details.ContractingEntity    |
+|populate field |Service Providers      |with|tv!Legal Entity Details.ServiceProviders     |
+|populate field |Launch Date            |with|tv!Legal Entity Details.LaunchDate           |
+|getInputLED                                                                               |
+|click on button|NEXT                                                                      |
+
+
+#|populate grid  |[1] |column|[2]|row |[2]|with|tv!Investment Details.IVC_1|
+#Investment Details
+!| script                                                               |
+|click on link  |Add underlying investment                              |
+|populate grid  |[2]|column|[2]|row|[1]|with|tv!Investment Details.IVC_1|
+|populate grid  |[2]|column|[8]|row|[1]|with|Daily                      |
+|populate grid  |[2]|column|[9]|row|[1]|with|1                          |
+|getInputID2                                                            |
+|click on button|Next                                                   |
+
+
+
+#contact details
+!| script                                                         |
+|click on link  |Add a contact                                    |
+|populate grid  |[2]|column|Name|row|[1]|with value|${Name}       |
+|populate grid  |[2]|column|[6] |row|[1]|with      |${ContactType}|
+|getInputCD2                                                      |
+|click on button|Initiate Onboarding                              |
+|click on button|Yes                                              |
+|click on button|Agree                                            |
+
+
+
+***!
+!*** Log out 
+!| script|
+|logout  |
+
+
+!***login
+!| script                                                                             |
+|set appian url to  |https://appiancoe.vuram.com/suite/sites/a-legal-entity-onboarding|
+|login with username|testuser_2                                                       |
 
 
 #sendback and getinput
 !|script                                           |
 |click on grid  |[1]     |column|[1]   |row  |[1]  |
 |accept task                                       |
-|getInputLED                                       |
 |click on button|NEXT                              |
-|getInputID                                        |
 |click on button|NEXT                              |
-|getInputCD                                        |
 |populate field |Comments|with  |Recheck and submit|
 |click on button|SEND BACK                         |
 
@@ -59,10 +115,10 @@ Test
 !|script                                                               |
 |click on grid  |[1]                    |column|[1]|row|[1]            |
 |clear field    |Legal Entity Identifier                               |
-|populate field |Legal Entity Identifier|with  |32145                  |
+|populate field |Legal Entity Identifier|with  |123                    |
 |click on button|NEXT                                                  |
 |clear grid     |[1]                    |column|[9]|row|[1]            |
-|populate grid  |[1]                    |column|[9]|row|[1]|with|9     |
+|populate grid  |[1]                    |column|[9]|row|[1]|with|1     |
 |click on button|NEXT                                                  |
 |clear grid     |[1]                    |column|[6]|row|[1]            |
 |populate grid  |[1]                    |column|[6]|row|[1]|with|Client|
@@ -91,6 +147,10 @@ Test
 |click on button|NEXT                  |
 |VerifyFieldCD                         |
 |click on button|Approve               |
+
+
+
+
 
 !*** Log out and tear down
 !| script |

@@ -6,7 +6,7 @@ Test
 !define TEST_SYSTEM {slim}
 !define COMMAND_PATTERN {java -Dlog4j.configuration=file:///${automated.testing.home}/log4j.properties -cp %p %m}
 !path ${automated.testing.home}/**.jar
-!define Name {Elon Musk}                                                                                                                             
+!define Name {Vijay Kumar}                                                                                                                             
 !define ContactType {Client}                                                                                                              
 *!
 ----
@@ -26,35 +26,13 @@ Test
 
 !| script                         |com.appiancorp.ps.automatedtest.fixture.TempoFixture                                                  |
 |setup for test script for browser|CHROME|locale|en_US|version|22.4|url|https://appiancoe.vuram.com/suite/sites/a-legal-entity-onboarding|
-|login with username              |testuser_2                                                                                            |
+|login with username              |testuser_1                                                                                            |
 ***!
 
 !**** defining variables
 !| script                                                                                                                                                                                                                                                                                                                                                                             |
 |set test variable|Legal Entity Details|with|{"ClientName":Accenture,"LegalEntityIdentifier":123,"LegalEntityName": Sample Entity Name,"Country":India,"Timezone": IST,"ClientEmailAddress":"vijayarajanm@vuram.com","OutgoingEmailAddress": divyasm@vuram.com,"ContractingEntity":Real Capital Inc - India,"ServiceProviders": Real Capital Inc - Australia,"LaunchDate": 04/01/2025}|
 |set test variable|Investment Details  |with|{"IVC_1":IVC001,"IVC_2":IVC002,"IVC_3":IVC003}                                                                                                                                                                                                                                                                                           |
-
-#sendback and getinput
-!|script                                           |
-|click on grid  |[1]     |column|[1]   |row  |[1]  |
-|accept task                                       |
-|getInputLED                                       |
-|click on button|NEXT                              |
-|getInputID                                        |
-|click on button|NEXT                              |
-|getInputCD                                        |
-|populate field |Comments|with  |Reject the request|
-|click on button|Reject                            |
-
-!*** Log out 
-!| script|
-|logout  |
-***!
-
-!*** Login to Tempo
-!| script                                                                             |
-|set appian url to  |https://appiancoe.vuram.com/suite/sites/a-legal-entity-onboarding|
-|login with username|testuser_1                                                       |
 
 
 !*** Initiate Legal Entity Onboarding
@@ -68,13 +46,15 @@ Test
 |populate field |Legal Entity Name      |with|tv!Legal Entity Details.LegalEntityName      |
 |populate field |Country                |with|tv!Legal Entity Details.Country              |
 |populate field |Timezone               |with|tv!Legal Entity Details.Timezone             |
+|wait for       |3                      |seconds                                           |
 |populate field |Client - Email Address |with|tv!Legal Entity Details.ClientEmailAddress   |
 |populate field |Outgoing Email Address |with|tv!Legal Entity Details.OutgoingEmailAddress |
 |populate field |Contracting Entity     |with|tv!Legal Entity Details.ContractingEntity    |
 |populate field |Service Providers      |with|tv!Legal Entity Details.ServiceProviders     |
 |populate field |Launch Date            |with|tv!Legal Entity Details.LaunchDate           |
-|VerifyFieldLED                                                                            |
+|getInputLED                                                                               |
 |click on button|NEXT                                                                      |
+
 
 #Investment Details
 !| script                                                               |
@@ -82,7 +62,7 @@ Test
 |populate grid  |[2]|column|[2]|row|[1]|with|tv!Investment Details.IVC_1|
 |populate grid  |[2]|column|[8]|row|[1]|with|Daily                      |
 |populate grid  |[2]|column|[9]|row|[1]|with|1                          |
-|VerifyFieldID2                                                         |
+|getInputID2                                                            |
 |click on button|Next                                                   |
 
 #contact details
@@ -90,10 +70,36 @@ Test
 |click on link  |Add a contact                                    |
 |populate grid  |[2]|column|Name|row|[1]|with value|${Name}       |
 |populate grid  |[2]|column|[6] |row|[1]|with      |${ContactType}|
-|VerifyFieldCD2                                                   |
+|getInputCD2                                                      |
 |click on button|Initiate Onboarding                              |
 |click on button|Yes                                              |
 |click on button|Agree                                            |
+
+
+
+!*** Log out 
+!| script|
+|logout  |
+***!
+
+!*** Login to Tempo
+!| script                                                                             |
+|set appian url to  |https://appiancoe.vuram.com/suite/sites/a-legal-entity-onboarding|
+|login with username|testuser_2                                                       |
+
+
+#Reject scneario
+!|script                                           |
+|click on grid  |[1]     |column|[1]   |row  |[1]  |
+|accept task                                       |
+|VerifyFieldLED                                    |
+|click on button|NEXT                              |
+|VerifyFieldID                                     |
+|click on button|NEXT                              |
+|VerifyFieldCD                                     |
+|populate field |Comments|with  |Reject the request|
+|click on button|Reject                            |
+
 
 
 

@@ -23,8 +23,6 @@ Test
 |populate record type user filter|Contracting Entity|with                   |Real Capital Inc - India                   |
 |populate record type user filter|Service Provider  |with                   |Real Capital Inc - United States of America|
 |populate record type user filter|Status            |with                   |Sent back                                  |
-|click on button with tooltip    |Manage Filters                                                                        |
-|click on link                   |Save filters as...                                                                    |
 |click on record                 |[1]                                                                                   |
 |verify record related action    |Related Actions   |is present                                                         |
 |show                            |get field         |Legal Entity Identifier|value                                      |
@@ -68,8 +66,9 @@ Test
 
 ***!
 !*** Log out 
-!| script|
-|logout  |
+!| script |
+|logout   |
+|tear down|
 ***!
 
 
