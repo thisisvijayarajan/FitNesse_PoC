@@ -35,7 +35,6 @@ Test
 
 !*** Initiate Legal Entity Onboarding
 
-#Legal Entity Details |populate field |Legal Entity Identifier|with|tv!Legal Entity Details.LegalEntityIdentifier|
 !|script                                                                                                         |
 |click on site page|Records                                                                                      |
 |click on button   |Initiate Legal Entity Onboarding                                                             |
@@ -62,6 +61,7 @@ Test
 |populate field    |Service Providers      |with                   |tv!Legal Entity Details.ServiceProviders     |
 |populate field    |Launch Date            |with                   |tv!Legal Entity Details.LaunchDate           |
 |click on button   |NEXT                                                                                         |
+
 
 #Investment Details
 !| script                                                                             |

@@ -6,8 +6,10 @@
 Default browser can be '''FIREFOX''' or '''CHROME'''
 !define defaultBrowser {FIREFOX}
 
+
 Default Version can be any supported Appian Version in '''xx.x''' format from (21.2 - 23.2)
 !define defaultVersion {23.2}
+
 
 Default Locale can be '''en_US''' or '''en_GB'''
 !define defaultLocale {en_US}

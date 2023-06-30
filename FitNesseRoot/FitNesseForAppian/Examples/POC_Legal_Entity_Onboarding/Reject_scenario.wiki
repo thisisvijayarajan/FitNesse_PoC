@@ -48,6 +48,7 @@ Test
 |click on button   |NEXT                                                                      |
 
 
+
 #|populate grid  |[1] |column|[2]|row |[2]|with|tv!Investment Details.IVC_1|
 #Investment Details
 !| script                                                               |

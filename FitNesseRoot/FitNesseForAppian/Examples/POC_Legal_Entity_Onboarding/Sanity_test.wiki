@@ -6,6 +6,14 @@ Test
 !path ${automated.testing.home}/**.jar
 
                                                                       
+
+!***> FitNesse Configurations
+
+!define TEST_SYSTEM {slim}
+!define COMMAND_PATTERN {java -Dlog4j.configuration=file:///${automated.testing.home}/log4j.properties -cp %p %m}
+!path ${automated.testing.home}/**.jar
+!define Name {Elon Musk}                                                                                                                             
+!define ContactType {Client}                                                                                                                  
 *!
 ----
 !3 '''Please follow the directions below to execute the test'''
@@ -21,6 +29,7 @@ Test
  3 Click "Test" at the top of this page
 ----
 !*** Initialization and Login to Tempo
+
 
 !|script                          |com.appiancorp.ps.automatedtest.fixture.SitesFixture                                                  |
 |setup for test script for browser|CHROME|locale|en_US|version|23.2|url|https://appiancoe.vuram.com/suite/sites/a-legal-entity-onboarding|
@@ -48,6 +57,7 @@ Test
 |populate field    |Service Providers      |with|tv!Legal Entity Details.ServiceProviders     |
 |populate field    |Launch Date            |with|tv!Legal Entity Details.LaunchDate           |
 |click on button   |NEXT                                                                      |
+
 
 
 #|populate grid  |[1] |column|[2]|row |[2]|with|tv!Investment Details.IVC_1|

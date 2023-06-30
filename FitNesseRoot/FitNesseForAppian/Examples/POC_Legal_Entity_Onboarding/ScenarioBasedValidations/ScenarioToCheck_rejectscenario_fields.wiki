@@ -24,6 +24,7 @@ Test
 ----
 !*** Initialization and Login to Tempo
 
+
 !| script                         |com.appiancorp.ps.automatedtest.fixture.SitesFixture                                                  |
 |setup for test script for browser|CHROME|locale|en_US|version|23.2|url|https://appiancoe.vuram.com/suite/sites/a-legal-entity-onboarding|
 |login with username              |testuser_1                                                                                            |
@@ -54,6 +55,7 @@ Test
 |populate field    |Launch Date            |with|tv!Legal Entity Details.LaunchDate           |
 |getInputLED                                                                                  |
 |click on button   |NEXT                                                                      |
+
 
 
 #Investment Details

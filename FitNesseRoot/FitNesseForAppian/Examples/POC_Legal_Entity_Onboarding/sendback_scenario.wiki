@@ -30,8 +30,8 @@ Test
 |set test variable|Investment Details  |with|{"IVC_1":IVC001,"IVC_2":IVC002,"IVC_3":IVC003}                                                                                                                                                                                                                                                                                           ||
 
 !*** Initiate Legal Entity Onboarding
-
 #Legal Entity Details
+
 !|script                                                                                      |
 |click on site page|Records                                                                   |
 |click on button   |Initiate Legal Entity Onboarding                                          |
@@ -46,6 +46,7 @@ Test
 |populate field    |Service Providers      |with|tv!Legal Entity Details.ServiceProviders     |
 |populate field    |Launch Date            |with|tv!Legal Entity Details.LaunchDate           |
 |click on button   |NEXT                                                                      |
+
 
 
 #|populate grid  |[1] |column|[2]|row |[2]|with|tv!Investment Details.IVC_1|
