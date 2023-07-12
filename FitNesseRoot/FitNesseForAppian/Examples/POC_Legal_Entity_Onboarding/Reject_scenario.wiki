@@ -34,6 +34,7 @@ Test
 #|click on button|Initiate Legal Entity Onboarding                                                     
 
 #Legal Entity Details
+<<<<<<< HEAD
 !|script                                                                                                           |
 |wait for                    |5                          |seconds                                                  |
 |open                        |https://appiancoe.vuram.com/suite/sites/a-legal-entity-onboarding/page/legal-entities|
@@ -50,6 +51,22 @@ Test
 |populate field              |Service Providers          |with    |tv!Legal Entity Details.ServiceProviders        |
 |populate field              |Launch Date                |with    |tv!Legal Entity Details.LaunchDate              |
 |click on button             |[4]                                                                                  |
+=======
+!|script                                                                                      |
+|click on site page|Records                                                                   |
+|click on button   |Initiate Legal Entity Onboarding                                          |
+|populate field    |Client Name            |with|tv!Legal Entity Details.ClientName           |
+|populate field    |Legal Entity Identifier|with|tv!Legal Entity Details.LegalEntityIdentifier|
+|populate field    |Legal Entity Name      |with|tv!Legal Entity Details.LegalEntityName      |
+|populate field    |Country                |with|tv!Legal Entity Details.Country              |
+|populate field    |Timezone               |with|tv!Legal Entity Details.Timezone             |
+|populate field    |Client - Email Address |with|tv!Legal Entity Details.ClientEmailAddress   |
+|populate field    |Outgoing Email Address |with|tv!Legal Entity Details.OutgoingEmailAddress |
+|populate field    |Contracting Entity     |with|tv!Legal Entity Details.ContractingEntity    |
+|populate field    |Service Providers      |with|tv!Legal Entity Details.ServiceProviders     |
+|populate field    |Launch Date            |with|tv!Legal Entity Details.LaunchDate           |
+|click on button   |NEXT                                                                      |
+>>>>>>> 7a657f24de522d285cfb8ab9d29d9f02d2ca70e9
 
 
 

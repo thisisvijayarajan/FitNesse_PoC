@@ -1,7 +1,18 @@
 ---
 Test
 ---
+<<<<<<< HEAD
 !*** FitNesse Configurations
+=======
+!define TEST_SYSTEM {slim}
+!define COMMAND_PATTERN {java -Dlog4j.debug -Dlog4j.configuration=file:\\\${automated.testing.home}\log4j.properties -cp %p %m}
+!path ${automated.testing.home}/**.jar
+
+                                                                      
+
+!***> FitNesse Configurations
+
+>>>>>>> 7a657f24de522d285cfb8ab9d29d9f02d2ca70e9
 !define TEST_SYSTEM {slim}
 !define COMMAND_PATTERN {java -Dlog4j.configuration=file:///${automated.testing.home}/log4j.properties -cp %p %m}
 !path ${automated.testing.home}/**.jar
@@ -26,7 +37,10 @@ Test
 
 !|script                          |com.appiancorp.ps.automatedtest.fixture.SitesFixture                                                  |
 |setup for test script for browser|CHROME|locale|en_US|version|23.2|url|https://appiancoe.vuram.com/suite/sites/a-legal-entity-onboarding|
+<<<<<<< HEAD
 |set timeout seconds to           |10                                                                                                    |
+=======
+>>>>>>> 7a657f24de522d285cfb8ab9d29d9f02d2ca70e9
 |login with username              |testuser_1                                                                                            |
 |set timeout seconds to           |10                                                                                                    |
 

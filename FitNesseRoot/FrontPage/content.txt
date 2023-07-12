@@ -14,5 +14,10 @@
 |[[Scenario Library][.ScenarioLibrary]]                                         |''Top Level Scenario Library containing setup scenarios''           |
 |[[Release Notes][.FitNesseForAppian.ReleaseNotes]]                             |''Find out about !-FitNesse for Appian-!'s new features''           |
 
+<<<<<<< HEAD
 !note FitNesseForAppian Release 23.2
+=======
+
+!note FitNesseForAppian Release 23.2.1
+>>>>>>> 7a657f24de522d285cfb8ab9d29d9f02d2ca70e9
 !note FitNesse Release ${FITNESSE_VERSION}

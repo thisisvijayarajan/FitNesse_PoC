@@ -35,6 +35,7 @@ Test
 
 !*** Initiate Legal Entity Onboarding
 
+<<<<<<< HEAD
 !|script                                                                                                      |
 |click on menu  |Records                                                                                      |
 |click on button|Initiate Legal Entity Onboarding                                                             |
@@ -61,6 +62,35 @@ Test
 |populate field |Service Providers      |with                   |tv!Legal Entity Details.ServiceProviders     |
 |populate field |Launch Date            |with                   |tv!Legal Entity Details.LaunchDate           |
 |click on button|NEXT                                                                                         |
+=======
+!|script                                                                                                         |
+|click on site page|Records                                                                                      |
+|click on button   |Initiate Legal Entity Onboarding                                                             |
+|click on button   |New                                                                                          |
+|populate field    |Client Name            |with                   |tv!Legal Entity Details.ClientName           |
+|$LEI=             |get random string      |21                                                                   |
+|populate field    |Legal Entity Identifier|with                   |$LEI                                         |
+|show              |get field              |Legal Entity Identifier|validation message                           |
+|$LEN=             |get random string      |256                                                                  |
+|populate field    |Legal Entity Name      |with                   |$LEN                                         |
+|show              |get field              |Legal Entity Name      |validation message                           |
+|$CLA=             |get random string      |1                                                                    |
+|populate field    |Client - Email Address |with                   |$CLA                                         |
+|show              |get field              |Client - Email Address |validation message                           |
+|populate field    |Launch date            |with                   |04/27/2023                                   |
+|show              |get field              |Launch date            |validation message                           |
+|populate field    |Legal Entity Identifier|with                   |tv!Legal Entity Details.LegalEntityIdentifier|
+|populate field    |Legal Entity Name      |with                   |tv!Legal Entity Details.LegalEntityName      |
+|populate field    |Country                |with                   |tv!Legal Entity Details.Country              |
+|populate field    |Timezone               |with                   |tv!Legal Entity Details.Timezone             |
+|populate field    |Client - Email Address |with                   |tv!Legal Entity Details.ClientEmailAddress   |
+|populate field    |Outgoing Email Address |with                   |tv!Legal Entity Details.OutgoingEmailAddress |
+|populate field    |Contracting Entity     |with                   |tv!Legal Entity Details.ContractingEntity    |
+|populate field    |Service Providers      |with                   |tv!Legal Entity Details.ServiceProviders     |
+|populate field    |Launch Date            |with                   |tv!Legal Entity Details.LaunchDate           |
+|click on button   |NEXT                                                                                         |
+
+>>>>>>> 7a657f24de522d285cfb8ab9d29d9f02d2ca70e9
 
 
 #Investment Details

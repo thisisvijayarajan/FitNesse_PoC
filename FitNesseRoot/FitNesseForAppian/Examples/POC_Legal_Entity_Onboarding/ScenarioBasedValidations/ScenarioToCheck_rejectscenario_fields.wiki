@@ -22,6 +22,68 @@ Test
    * Open ${automated.testing.home}/configs/users.properties and add a line for the above username that is of the form username=password (e.g. test.user=password)
  3 Click "Test" at the top of this page
 
+<<<<<<< HEAD
+=======
+
+!| script                         |com.appiancorp.ps.automatedtest.fixture.SitesFixture                                                  |
+|setup for test script for browser|CHROME|locale|en_US|version|23.2|url|https://appiancoe.vuram.com/suite/sites/a-legal-entity-onboarding|
+|login with username              |testuser_1                                                                                            |
+***!
+
+!**** defining variables
+!| script                                                                                                                                                                                                                                                                                                                                                                             |
+|set test variable|Legal Entity Details|with|{"ClientName":Accenture,"LegalEntityIdentifier":123,"LegalEntityName": Sample Entity Name,"Country":India,"Timezone": IST,"ClientEmailAddress":"vijayarajanm@vuram.com","OutgoingEmailAddress": divyasm@vuram.com,"ContractingEntity":Real Capital Inc - India,"ServiceProviders": Real Capital Inc - Australia,"LaunchDate": 04/01/2025}|
+|set test variable|Investment Details  |with|{"IVC_1":IVC001,"IVC_2":IVC002,"IVC_3":IVC003}                                                                                                                                                                                                                                                                                           |
+
+
+!*** Initiate Legal Entity Onboarding
+#Legal Entity Details
+!|script                                                                                      |
+|click on site page|Records                                                                   |
+|click on button   |Initiate Legal Entity Onboarding                                          |
+|wait for          |3                      |seconds                                           |
+|populate field    |Client Name            |with|tv!Legal Entity Details.ClientName           |
+|populate field    |Legal Entity Identifier|with|tv!Legal Entity Details.LegalEntityIdentifier|
+|populate field    |Legal Entity Name      |with|tv!Legal Entity Details.LegalEntityName      |
+|populate field    |Country                |with|tv!Legal Entity Details.Country              |
+|populate field    |Timezone               |with|tv!Legal Entity Details.Timezone             |
+|wait for          |3                      |seconds                                           |
+|populate field    |Client - Email Address |with|tv!Legal Entity Details.ClientEmailAddress   |
+|populate field    |Outgoing Email Address |with|tv!Legal Entity Details.OutgoingEmailAddress |
+|populate field    |Contracting Entity     |with|tv!Legal Entity Details.ContractingEntity    |
+|populate field    |Service Providers      |with|tv!Legal Entity Details.ServiceProviders     |
+|populate field    |Launch Date            |with|tv!Legal Entity Details.LaunchDate           |
+|getInputLED                                                                                  |
+|click on button   |NEXT                                                                      |
+
+
+
+#Investment Details
+!| script                                                               |
+|click on link  |Add underlying investment                              |
+|populate grid  |[2]|column|[2]|row|[1]|with|tv!Investment Details.IVC_1|
+|populate grid  |[2]|column|[8]|row|[1]|with|Daily                      |
+|populate grid  |[2]|column|[9]|row|[1]|with|1                          |
+|getInputID2                                                            |
+|click on button|Next                                                   |
+
+#contact details
+!| script                                                         |
+|click on link  |Add a contact                                    |
+|populate grid  |[2]|column|Name|row|[1]|with value|${Name}       |
+|populate grid  |[2]|column|[6] |row|[1]|with      |${ContactType}|
+|getInputCD2                                                      |
+|click on button|Initiate Onboarding                              |
+|click on button|Yes                                              |
+|click on button|Agree                                            |
+
+
+
+!*** Log out 
+!| script|
+|logout  |
+***!
+>>>>>>> 7a657f24de522d285cfb8ab9d29d9f02d2ca70e9
 
 !*** Login to Tempo
 !| script                         |com.appiancorp.ps.automatedtest.fixture.SitesFixture                                                  |

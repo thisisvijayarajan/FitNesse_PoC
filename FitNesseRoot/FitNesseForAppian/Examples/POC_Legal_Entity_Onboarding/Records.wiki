@@ -9,7 +9,11 @@ Test
 !path ${automated.testing.home}/**.jar
 
 !*** Initialization and Login to IO
+<<<<<<< HEAD
 !|script|com.appiancorp.ps.automatedtest.fixture.SitesFixture|
+=======
+!|script                          |com.appiancorp.ps.automatedtest.fixture.SitesFixture                                                  |
+>>>>>>> 7a657f24de522d285cfb8ab9d29d9f02d2ca70e9
 |setup for test script for browser|CHROME|locale|en_US|version|23.2|url|https://appiancoe.vuram.com/suite/sites/a-legal-entity-onboarding|
 |login with username              |testuser_1                                                                                            |
 *!

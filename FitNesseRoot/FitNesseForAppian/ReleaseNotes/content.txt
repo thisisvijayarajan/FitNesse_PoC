@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+!3 v23.2.1
+* Bug Fixes
+  * Update pickers to recognize selections with links (e.g. Record Pickers)
+
+>>>>>>> 7a657f24de522d285cfb8ab9d29d9f02d2ca70e9
 !3 v23.2
 * Enhancements
   * Supports Appian version 23.2
