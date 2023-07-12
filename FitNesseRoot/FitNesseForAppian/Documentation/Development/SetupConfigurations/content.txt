@@ -24,7 +24,7 @@
   * Enables logging
   * Log can be found in ${automated.testing.home}/logs/fitnesse.log
  * '''| set appian version to | VERSION_NUMBER |'''
-  * In xx.x format, currently supporting versions (21.2 - 23.1)
+  * In xx.x format, currently supporting versions (21.2 - 23.2)
  * '''| set appian locale to | LOCALE |'''
   * en_US or en_GB
  * '''| set stop on error to  | TRUE_OR_FALSE |'''

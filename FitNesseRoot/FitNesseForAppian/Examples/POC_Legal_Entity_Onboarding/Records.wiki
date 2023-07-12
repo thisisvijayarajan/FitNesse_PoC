@@ -1,24 +1,21 @@
 ---
 Test
 ---
-!***> FitNesse Configurations
+!*** FitNesse Configurations
 
+#dummmy comment
 !define TEST_SYSTEM {slim}
 !define COMMAND_PATTERN {java -Dlog4j.configuration=file:///${automated.testing.home}/log4j.properties -cp %p %m}
 !path ${automated.testing.home}/**.jar
 
 !*** Initialization and Login to IO
-!| script                         |com.appiancorp.ps.automatedtest.fixture.TempoFixture                                                  |
-|setup for test script for browser|CHROME|locale|en_US|version|22.4|url|https://appiancoe.vuram.com/suite/sites/a-legal-entity-onboarding|
+!|script|com.appiancorp.ps.automatedtest.fixture.SitesFixture|
+|setup for test script for browser|CHROME|locale|en_US|version|23.2|url|https://appiancoe.vuram.com/suite/sites/a-legal-entity-onboarding|
 |login with username              |testuser_1                                                                                            |
+*!
 
-#|populate field|Search            |with|tradnametest         |
-#search terms
-#|check filters                                                                   |
-
-#using search boxes and filters
 !| script                                                                                                               |
-|click on menu                   |Records                                                                               |
+|click on site page              |Records                                                                               |
 |click on button with tooltip    |refresh                                                                               |
 |populate record type user filter|Contracting Entity|with                   |Real Capital Inc - India                   |
 |populate record type user filter|Service Provider  |with                   |Real Capital Inc - United States of America|

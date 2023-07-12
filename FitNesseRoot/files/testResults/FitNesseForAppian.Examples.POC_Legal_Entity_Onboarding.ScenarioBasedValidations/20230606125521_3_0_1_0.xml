@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<suiteResults>
+  <FitNesseVersion>v20221219</FitNesseVersion>
+  <rootPath>FitNesseForAppian.Examples.POC_Legal_Entity_Onboarding.ScenarioBasedValidations</rootPath>
+  <pageHistoryReference>
+    <name>FitNesseForAppian.Examples.POC_Legal_Entity_Onboarding.ScenarioBasedValidations.FieldValidations_scenarios</name>
+    <date>2023-06-06T12:55:21+05:30</date>
+    <pageHistoryLink>FitNesseForAppian.Examples.POC_Legal_Entity_Onboarding.ScenarioBasedValidations.FieldValidations_scenarios?pageHistory&amp;resultDate=20230606125521</pageHistoryLink>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>108320</runTimeInMillis>
+  </pageHistoryReference>
+  <pageHistoryReference>
+    <name>FitNesseForAppian.Examples.POC_Legal_Entity_Onboarding.ScenarioBasedValidations.ScenarioToCheck_IO_EnteredValues_populating_in_CI_screen</name>
+    <date>2023-06-06T12:57:09+05:30</date>
+    <pageHistoryLink>FitNesseForAppian.Examples.POC_Legal_Entity_Onboarding.ScenarioBasedValidations.ScenarioToCheck_IO_EnteredValues_populating_in_CI_screen?pageHistory&amp;resultDate=20230606125709</pageHistoryLink>
+    <counts>
+      <right>10</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>123577</runTimeInMillis>
+  </pageHistoryReference>
+  <pageHistoryReference>
+    <name>FitNesseForAppian.Examples.POC_Legal_Entity_Onboarding.ScenarioBasedValidations.ScenarioToCheck_rejectscenario_fields</name>
+    <date>2023-06-06T12:59:13+05:30</date>
+    <pageHistoryLink>FitNesseForAppian.Examples.POC_Legal_Entity_Onboarding.ScenarioBasedValidations.ScenarioToCheck_rejectscenario_fields?pageHistory&amp;resultDate=20230606125913</pageHistoryLink>
+    <counts>
+      <right>22</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>156002</runTimeInMillis>
+  </pageHistoryReference>
+  <pageHistoryReference>
+    <name>FitNesseForAppian.Examples.POC_Legal_Entity_Onboarding.ScenarioBasedValidations.ScenarioToCheck_submit_theSentBackRequest</name>
+    <date>2023-06-06T13:01:49+05:30</date>
+    <pageHistoryLink>FitNesseForAppian.Examples.POC_Legal_Entity_Onboarding.ScenarioBasedValidations.ScenarioToCheck_submit_theSentBackRequest?pageHistory&amp;resultDate=20230606130149</pageHistoryLink>
+    <counts>
+      <right>22</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>218808</runTimeInMillis>
+  </pageHistoryReference>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>java -Dlog4j.configuration=file:///C:\FitNesse/log4j.properties -cp C:\FitNesse\lib\accessors-smart-2.4.9.jar;C:\FitNesse\lib\asm-9.3.jar;C:\FitNesse\lib\async-http-client-2.12.3.jar;C:\FitNesse\lib\async-http-client-netty-utils-2.12.3.jar;C:\FitNesse\lib\auto-common-1.2.jar;C:\FitNesse\lib\auto-service-1.0.1.jar;C:\FitNesse\lib\auto-service-annotations-1.0.1.jar;C:\FitNesse\lib\byte-buddy-1.14.2.jar;C:\FitNesse\lib\checker-qual-3.12.0.jar;C:\FitNesse\lib\commons-codec-1.15.jar;C:\FitNesse\lib\commons-exec-1.3.jar;C:\FitNesse\lib\commons-io-2.11.0.jar;C:\FitNesse\lib\commons-lang3-3.12.0.jar;C:\FitNesse\lib\commons-text-1.10.0.jar;C:\FitNesse\lib\diffutils-1.3.0.jar;C:\FitNesse\lib\error_prone_annotations-2.11.0.jar;C:\FitNesse\lib\failsafe-3.3.1.jar;C:\FitNesse\lib\failureaccess-1.0.1.jar;C:\FitNesse\lib\fitnesse-20221219-standalone.jar;C:\FitNesse\lib\google-analytics-java-2.0.0.jar;C:\FitNesse\lib\gson-2.10.1.jar;C:\FitNesse\lib\guava-31.1-jre.jar;C:\FitNesse\lib\htmllexer-2.1.jar;C:\FitNesse\lib\htmlparser-2.1.jar;C:\FitNesse\lib\httpclient-4.5.13.jar;C:\FitNesse\lib\httpcore-4.4.13.jar;C:\FitNesse\lib\j2objc-annotations-1.3.jar;C:\FitNesse\lib\jackson-annotations-2.14.2.jar;C:\FitNesse\lib\jackson-core-2.14.2.jar;C:\FitNesse\lib\jackson-databind-2.14.2.jar;C:\FitNesse\lib\jakarta.activation-1.2.2.jar;C:\FitNesse\lib\jcl-over-slf4j-1.7.25.jar;C:\FitNesse\lib\jcommander-1.82.jar;C:\FitNesse\lib\json-20230227.jar;C:\FitNesse\lib\json-path-2.8.0.jar;C:\FitNesse\lib\json-smart-2.4.10.jar;C:\FitNesse\lib\jsr305-3.0.2.jar;C:\FitNesse\lib\jtoml-2.0.0.jar;C:\FitNesse\lib\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\FitNesse\lib\log4j-api-2.20.0.jar;C:\FitNesse\lib\log4j-core-2.20.0.jar;C:\FitNesse\lib\netty-buffer-4.1.90.Final.jar;C:\FitNesse\lib\netty-codec-4.1.90.Final.jar;C:\FitNesse\lib\netty-codec-http-4.1.90.Final.jar;C:\FitNesse\lib\netty-codec-socks-4.1.90.Final.jar;C:\FitNesse\lib\netty-common-4.1.90.Final.jar;C:\FitNesse\lib\netty-handler-4.1.90.Final.jar;C:\FitNesse\lib\netty-handler-proxy-4.1.90.Final.jar;C:\FitNesse\lib\netty-reactive-streams-2.0.4.jar;C:\FitNesse\lib\netty-resolver-4.1.90.Final.jar;C:\FitNesse\lib\netty-transport-4.1.90.Final.jar;C:\FitNesse\lib\netty-transport-classes-epoll-4.1.90.Final.jar;C:\FitNesse\lib\netty-transport-classes-kqueue-4.1.90.Final.jar;C:\FitNesse\lib\netty-transport-native-epoll-4.1.90.Final-linux-x86_64.jar;C:\FitNesse\lib\netty-transport-native-epoll-4.1.90.Final.jar;C:\FitNesse\lib\netty-transport-native-kqueue-4.1.90.Final-osx-x86_64.jar;C:\FitNesse\lib\netty-transport-native-kqueue-4.1.90.Final.jar;C:\FitNesse\lib\netty-transport-native-unix-common-4.1.90.Final.jar;C:\FitNesse\lib\opentelemetry-api-1.24.0.jar;C:\FitNesse\lib\opentelemetry-api-events-1.24.0-alpha.jar;C:\FitNesse\lib\opentelemetry-api-logs-1.24.0-alpha.jar;C:\FitNesse\lib\opentelemetry-context-1.24.0.jar;C:\FitNesse\lib\opentelemetry-exporter-logging-1.24.0.jar;C:\FitNesse\lib\opentelemetry-sdk-1.24.0.jar;C:\FitNesse\lib\opentelemetry-sdk-common-1.24.0.jar;C:\FitNesse\lib\opentelemetry-sdk-extension-autoconfigure-1.24.0-alpha.jar;C:\FitNesse\lib\opentelemetry-sdk-extension-autoconfigure-spi-1.24.0.jar;C:\FitNesse\lib\opentelemetry-sdk-logs-1.24.0-alpha.jar;C:\FitNesse\lib\opentelemetry-sdk-metrics-1.24.0.jar;C:\FitNesse\lib\opentelemetry-sdk-trace-1.24.0.jar;C:\FitNesse\lib\opentelemetry-semconv-1.24.0-alpha.jar;C:\FitNesse\lib\reactive-streams-1.0.3.jar;C:\FitNesse\lib\selenium-api-4.8.2.jar;C:\FitNesse\lib\selenium-chrome-driver-4.8.2.jar;C:\FitNesse\lib\selenium-chromium-driver-4.8.2.jar;C:\FitNesse\lib\selenium-devtools-v109-4.8.2.jar;C:\FitNesse\lib\selenium-devtools-v110-4.8.2.jar;C:\FitNesse\lib\selenium-devtools-v111-4.8.2.jar;C:\FitNesse\lib\selenium-devtools-v85-4.8.2.jar;C:\FitNesse\lib\selenium-edge-driver-4.8.2.jar;C:\FitNesse\lib\selenium-firefox-driver-4.8.2.jar;C:\FitNesse\lib\selenium-http-4.8.2.jar;C:\FitNesse\lib\selenium-ie-driver-4.8.2.jar;C:\FitNesse\lib\selenium-java-4.8.2.jar;C:\FitNesse\lib\selenium-json-4.8.2.jar;C:\FitNesse\lib\selenium-manager-4.8.2.jar;C:\FitNesse\lib\selenium-remote-driver-4.8.2.jar;C:\FitNesse\lib\selenium-safari-driver-4.8.2.jar;C:\FitNesse\lib\selenium-support-4.8.2.jar;C:\FitNesse\lib\slf4j-api-1.7.36.jar;C:\FitNesse\lib\slf4j-jdk14-1.7.36.jar;C:\FitNesse\lib\velocity-engine-core-2.3.jar;C:\FitNesse\lib\appian\appian-selenium-api-23.1.1.jar;C:\FitNesse\lib\fitnesse-20221219-standalone.jar fitnesse.slim.SlimService 1</command>
+    <exitCode>1</exitCode>
+    <stdOut></stdOut>
+    <stdErr>ERROR StatusLogger Reconfiguration failed: No configuration found for '1d44bcfa' at 'null' in 'null'
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/C:/FitNesse/lib/fitnesse-20221219-standalone.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/C:/FitNesse/lib/slf4j-jdk14-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.JDK14LoggerFactory]
+ChromeDriver was started successfully.
+
+Jun 06, 2023 12:55:36 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 113, so returning the closest version found: 111
+
+ChromeDriver was started successfully.
+
+Jun 06, 2023 12:57:19 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 113, so returning the closest version found: 111
+
+ChromeDriver was started successfully.
+
+Jun 06, 2023 12:59:22 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 113, so returning the closest version found: 111
+
+ChromeDriver was started successfully.
+
+Jun 06, 2023 1:02:00 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 113, so returning the closest version found: 111
+
+</stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>3</right>
+    <wrong>0</wrong>
+    <ignores>1</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>616444</totalRunTimeInMillis>
+</suiteResults>
+

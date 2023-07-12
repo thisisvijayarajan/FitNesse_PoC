@@ -24,14 +24,15 @@ Test
 ----
 !*** Initialization and Login to Tempo
 
-!| script                         |com.appiancorp.ps.automatedtest.fixture.TempoFixture                                                  |
-|setup for test script for browser|CHROME|locale|en_US|version|22.4|url|https://appiancoe.vuram.com/suite/sites/a-legal-entity-onboarding|
+
+!| script                         |com.appiancorp.ps.automatedtest.fixture.SitesFixture                                                  |
+|setup for test script for browser|CHROME|locale|en_US|version|23.2|url|https://appiancoe.vuram.com/suite/sites/a-legal-entity-onboarding|
 |login with username              |testuser_1                                                                                            |
 
 
 #Reports
 !| script                                                                  |
-|click on menu        |Reports                                             |
+|click on site page   |Reports                                             |
 |click on card        |Legal Entities By Contracting Entities[1]           |
 |click on pie chart   |Real Capital Inc - Australia          |pie slice|[1]|
 |click on column chart|Real Capital Inc - Netherlands        |column   |[1]|

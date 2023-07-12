@@ -24,8 +24,8 @@ Test
 ----
 !*** Initialization and Login to Tempo
 
-!| script                         |com.appiancorp.ps.automatedtest.fixture.TempoFixture                                                  |
-|setup for test script for browser|CHROME|locale|en_US|version|22.4|url|https://appiancoe.vuram.com/suite/sites/a-legal-entity-onboarding|
+!| script                         |com.appiancorp.ps.automatedtest.fixture.SitesFixture                                                  |
+|setup for test script for browser|CHROME|locale|en_US|version|23.2|url|https://appiancoe.vuram.com/suite/sites/a-legal-entity-onboarding|
 |login with username              |testuser_1                                                                                            |
 
 !**** defining variables
@@ -35,7 +35,6 @@ Test
 
 !*** Initiate Legal Entity Onboarding
 
-#Legal Entity Details |populate field |Legal Entity Identifier|with|tv!Legal Entity Details.LegalEntityIdentifier|
 !|script                                                                                                      |
 |click on menu  |Records                                                                                      |
 |click on button|Initiate Legal Entity Onboarding                                                             |
@@ -62,6 +61,7 @@ Test
 |populate field |Service Providers      |with                   |tv!Legal Entity Details.ServiceProviders     |
 |populate field |Launch Date            |with                   |tv!Legal Entity Details.LaunchDate           |
 |click on button|NEXT                                                                                         |
+
 
 #Investment Details
 !| script                                                                             |

@@ -1,3 +1,12 @@
+!3 v23.2
+* Enhancements
+  * Supports Appian version 23.2
+
+!3 v23.1.2
+* Bug Fixes
+  * Fixes an issue in FitNesse where VerifyText did not work on a multi-node component
+  * Fixes an issue where Dropdowns with Search were not working
+
 !3 v23.1.1
 * Enhancements
   * Removed bundled browser drivers

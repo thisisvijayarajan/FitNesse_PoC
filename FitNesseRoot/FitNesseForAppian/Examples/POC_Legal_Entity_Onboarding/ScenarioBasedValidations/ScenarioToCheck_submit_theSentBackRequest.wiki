@@ -23,8 +23,9 @@ Test
  3 Click "Test" at the top of this page
 ----
 !*** Initialization and Login to Tempo
-!| script                         |com.appiancorp.ps.automatedtest.fixture.TempoFixture                                                  |
-|setup for test script for browser|CHROME|locale|en_US|version|22.4|url|https://appiancoe.vuram.com/suite/sites/a-legal-entity-onboarding|
+
+!| script                         |com.appiancorp.ps.automatedtest.fixture.SitesFixture                                                  |
+|setup for test script for browser|CHROME|locale|en_US|version|23.2|url|https://appiancoe.vuram.com/suite/sites/a-legal-entity-onboarding|
 |login with username              |testuser_1                                                                                            |
 
 
@@ -37,21 +38,22 @@ Test
 !*** Initiate Legal Entity Onboarding
 
 #Legal Entity Details
-!|script                                                                                   |
-|click on menu  |Records                                                                   |
-|click on button|Initiate Legal Entity Onboarding                                          |
-|populate field |Client Name            |with|tv!Legal Entity Details.ClientName           |
-|populate field |Legal Entity Identifier|with|tv!Legal Entity Details.LegalEntityIdentifier|
-|populate field |Legal Entity Name      |with|tv!Legal Entity Details.LegalEntityName      |
-|populate field |Country                |with|tv!Legal Entity Details.Country              |
-|populate field |Timezone               |with|tv!Legal Entity Details.Timezone             |
-|populate field |Client - Email Address |with|tv!Legal Entity Details.ClientEmailAddress   |
-|populate field |Outgoing Email Address |with|tv!Legal Entity Details.OutgoingEmailAddress |
-|populate field |Contracting Entity     |with|tv!Legal Entity Details.ContractingEntity    |
-|populate field |Service Providers      |with|tv!Legal Entity Details.ServiceProviders     |
-|populate field |Launch Date            |with|tv!Legal Entity Details.LaunchDate           |
-|getInputLED                                                                               |
-|click on button|NEXT                                                                      |
+
+!|script                                                                                      |
+|click on site page|Records                                                                   |
+|click on button   |Initiate Legal Entity Onboarding                                          |
+|populate field    |Client Name            |with|tv!Legal Entity Details.ClientName           |
+|populate field    |Legal Entity Identifier|with|tv!Legal Entity Details.LegalEntityIdentifier|
+|populate field    |Legal Entity Name      |with|tv!Legal Entity Details.LegalEntityName      |
+|populate field    |Country                |with|tv!Legal Entity Details.Country              |
+|populate field    |Timezone               |with|tv!Legal Entity Details.Timezone             |
+|populate field    |Client - Email Address |with|tv!Legal Entity Details.ClientEmailAddress   |
+|populate field    |Outgoing Email Address |with|tv!Legal Entity Details.OutgoingEmailAddress |
+|populate field    |Contracting Entity     |with|tv!Legal Entity Details.ContractingEntity    |
+|populate field    |Service Providers      |with|tv!Legal Entity Details.ServiceProviders     |
+|populate field    |Launch Date            |with|tv!Legal Entity Details.LaunchDate           |
+|getInputLED                                                                                  |
+|click on button   |NEXT                                                                      |
 
 
 #|populate grid  |[1] |column|[2]|row |[2]|with|tv!Investment Details.IVC_1|
