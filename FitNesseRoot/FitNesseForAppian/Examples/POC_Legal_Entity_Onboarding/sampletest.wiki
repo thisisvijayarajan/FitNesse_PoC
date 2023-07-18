@@ -1,0 +1,87 @@
+---
+Test
+---
+!*** FitNesse Configurations
+
+!define TEST_SYSTEM {slim}
+!define COMMAND_PATTERN {java -Dlog4j.configuration=file:///${automated.testing.home}/log4j.properties -cp %p %m}
+!path ${automated.testing.home}/**.jar
+!define Name {Vijay Kumar}                                                                                                                             
+!define ContactType {Client} 
+
+#login
+!|script              |com.appiancorp.ps.automatedtest.fixture.SitesFixture             |
+|setup with browser   |CHROME                                                           |
+|set appian locale to |en_US                                                            |
+|set appian version to|23.2                                                             |
+|set appian url to    |https://appiancoe.vuram.com/suite/sites/a-legal-entity-onboarding|
+|login with username  |testuser_2                                                       |
+
+
+#sendback and getinput
+!|script                                           |
+|click on grid  |[1]     |column|[1]   |row  |[1]  |
+|accept task                                       |
+|click on button|NEXT                              |
+|click on button|NEXT                              |
+|populate field |Comments|with  |Recheck and submit|
+|click on button|SEND BACK                         |
+
+!*** Log out 
+!| script|
+|logout  |
+***!
+
+!*** Login to Tempo
+
+!| script                                                                             |
+|set appian url to  |https://appiancoe.vuram.com/suite/sites/a-legal-entity-onboarding|
+|login with username|testuser_1                                                       |
+
+
+#submit the sendback request
+!|script                                                               |
+|click on grid  |[1]                    |column|[1]|row|[1]            |
+|clear field    |Legal Entity Identifier                               |
+|populate field |Legal Entity Identifier|with  |123                    |
+|click on button|NEXT                                                  |
+|clear grid     |[1]                    |column|[9]|row|[1]            |
+|populate grid  |[1]                    |column|[9]|row|[1]|with|1     |
+|click on button|NEXT                                                  |
+|clear grid     |[1]                    |column|[6]|row|[1]            |
+|populate grid  |[1]                    |column|[6]|row|[1]|with|Client|
+|click on button|UPDATE DETAILS                                        |
+|click on button|YES                                                   |
+
+!*** Log out 
+!| script|
+|logout  |
+***!
+
+----
+!*** Login to Tempo
+!| script                                                                             |
+|set appian url to  |https://appiancoe.vuram.com/suite/sites/a-legal-entity-onboarding|
+|login with username|testuser_2                                                       |
+
+
+#verify sendback fields
+!| script                              |
+|click on grid  |[1]|column|[1]|row|[1]|
+|accept task                           |
+|VerifyFieldLED                        |
+|click on button|NEXT                  |
+|VerifyFieldID                         |
+|click on button|NEXT                  |
+|VerifyFieldCD                         |
+|click on button|Approve               |
+
+
+
+
+
+!*** Log out and tear down
+!| script |
+|logout   |
+|tear down|
+***!
